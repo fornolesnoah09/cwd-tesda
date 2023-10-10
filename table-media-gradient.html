@@ -13,7 +13,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Day 3</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-        <link rel="stylesheet" href="style.css">
+        <style>
+            h1, h2, h3, h4, h5, h6, p {
+                font-weight: 200;
+            }
+
+            body {
+                /* use gradient background for our website */
+                background: linear-gradient(90deg, rgba(255, 250, 207, 1) 2%, rgba(227, 135, 107, 1) 100%);
+            }
+
+            /* modify striped background color of table rows */
+            table.striped>tbody>tr:nth-child(even) {
+                background-color: rgb(255, 137, 101);
+            }
+
+            table.striped>tbody>tr:nth-child(odd) {
+                background-color: rgb(255, 250, 209);
+            }
+        </style>
     </head>
     <body>
         <h1 class="black-text text-lighten-2 center">Table</h1>
@@ -312,3 +330,6 @@
     </body>
 </html>
 
+<!-- 
+    try materialboxed sa video embed
+-->
