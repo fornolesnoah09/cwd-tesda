@@ -11,7 +11,11 @@
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-        <link rel="stylesheet" href="style.css" />
+        <style>
+            h1, h2, h3, h4, h5, h6, p {
+                font-weight: 200;
+            }
+        </style>
     </head>
     <body>
         <h1 class="teal-text text-lighten-2 center">Table</h1>
@@ -185,7 +189,7 @@
                       <img src="images/noah.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                     </div>
                     <div class="col s10">
-                      <span class="black-text">
+                      <span class="teal-text">
                         This is a square image. Add the "circle" class to it to make it appear circular.
                       </span>
                     </div>
@@ -216,9 +220,71 @@
             </div>
         </div>
 
+        <br><br><br><br>
+        <h1 class="teal-text text-lighten-2 center">Media JS</h1>
+        <div class="divider black"></div>
+        <div class="container">
+            <p>Media components include things that have to do with large media objects like Images, Video, Audio, etc.</p>
+            <h3 class="teal-text text-lighten-2">Material Box</h3>
+            <p>Material box is a material design implementation of the Lightbox plugin. When a user clicks on an image that can be enlarged, Material box centers the image and enlarges it in a smooth, non-jarring manner. To dismiss the image, the user can either click on the image again, scroll away, or press the ESC key.</p>
+            <img src="images/food-1.jpg" alt="" class="materialboxed responsive-img" data-caption="Yummy Overload Burger">
+
+            <br>
+            <h3 class="teal-text text-lighten-2">Slider</h3>
+            <p>Our slider is a simple and elegant image carousel. You can also have captions that will be transitioned on their own depending on their alignment. You can also have indicators that show up on the bottom of the slider.</p>
+            
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="images/food-2.jpg" alt="">
+                        <div class="caption center-align">
+                            <h3>Favorite #1</h3>
+                            <h5>Burger with fries</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/food-3.jpg" alt="">
+                        <div class="caption left-align">
+                            <h3>Favorite #2</h3>
+                            <h5>Spaghetti</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/food-4.jpg" alt="">
+                        <div class="caption right-align">
+                            <h3>Favorite #3</h3>
+                            <h5>Lasagna</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/food-5.jpg" alt="">
+                        <div class="caption center-align">
+                            <h3>Favorite #4</h3>
+                            <h5>Burger Overload</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <div style="height: 1000px"></div>
 
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('.materialboxed').materialbox({
+                    inDuration: 300,
+                    outDuration: 300,
+                });
+
+                $('.slider').slider({
+                    height: 400,
+                    duration: 500,
+                    interval: 3000
+                });
+            });
+        </script>
     </body>
 </html>
