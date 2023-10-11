@@ -1,0 +1,80 @@
+<!-- 
+    Day 5
+    October 11 2023
+    - learned about using buttons and I explore using the floatingActionButton that is fixed at the bottom right corner of the page and has hover effects
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Day 4 & 5</title>
+        <!-- material icon -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- materialize css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+        <!-- custom css -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1 class="blue-text text-lighten-2 center">Navbar</h1>
+        <div class="divider"></div>
+        <br/>
+        <div class="container">
+            <p>There are 3 main button types described in material design. The raised button is a standard button that signify actions and seek to give depth to a mostly flat page. The floating circular action button is meant for very important functions. Flat buttons are usually used within elements that already have depth like cards or modals.</p>
+            
+            <h3 class="blue-text text-lighten-2">Raised</h3>
+            <p>To right align your navbar links, just add a right class to your <'ul'> that contains them.</p>
+            <a class="waves-effect waves-light btn blue lighten-2">button</a>
+            <a class="waves-effect waves-light btn red lighten-2">
+                <i class="material-icons left">cloud</i>button
+            </a>
+            <a class="waves-effect waves-light btn green lighten-2">
+                <i class="material-icons right">cloud</i>button
+            </a>
+
+            <br>
+            <h3 class="blue-text text-lighten-2">Floating</h3>
+            <a class="btn-floating btn-large waves-effect waves-light purple lighten-2">
+                <i class="material-icons">add</i>
+            </a>
+
+            <p class="flow-text">Floating Action Button</p>
+            <p>See the documentation on <a href="https://materializecss.com/floating-action-button.html" target="_blank">this page</a></p>
+           
+            <h3 class="blue-text text-lighten-2">Flat</h3>
+            <p>Flat buttons are used to reduce excessive layering. For example, flat buttons are usually used for actions within a card or modal so there aren't too many overlapping shadows.</p>
+            <a class="waves-effect waves-light btn-flat pink lighten-2 white-text">Button</a>
+
+
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large orange">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <ul>
+                    <li><a class="btn-floating red"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a class="btn-floating orange"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a class="btn-floating purple"><i class="material-icons">discord</i></a></li>
+                    <li><a class="btn-floating blue"><i class="material-icons">facebook</i></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- <div style="height: 1000px"></div> -->
+
+        <!-- jquery link -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- font awesome personal link -->
+        <script src="https://kit.fontawesome.com/689a514355.js" crossorigin="anonymous"></script>
+        <!-- materialize js link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                $('.fixed-action-btn').floatingActionButton();
+            });
+        </script>
+    </body>
+</html>
