@@ -2,6 +2,10 @@
     Day 5
     October 11 2023
     - learned about using buttons and I explore using the floatingActionButton that is fixed at the bottom right corner of the page and has hover effects
+
+    Day 6
+    October 12 2023
+    - learned about other buttons and the floatingActionButton that I already explored and it has been tackled today (day 6) and we also use the toolbar so I made some modifications :)
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +51,54 @@
             <p>Flat buttons are used to reduce excessive layering. For example, flat buttons are usually used for actions within a card or modal so there aren't too many overlapping shadows.</p>
             <a class="waves-effect waves-light btn-flat pink lighten-2 white-text">Button</a>
 
+            <h3 class="blue-text text-lighten-2">Submit Button</h3>
+            <p>When you use a button to submit a form, instead of using a input tag, use a button tag with a type submit</p>
+            <button class="btn waves-effect waves-light blue" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
 
+            <h3 class="blue-text text-lighten-2">Large</h3>
+            <p>This button has a larger height for buttons that need more attention.</p>
+            <a class="waves-effect waves-light btn-large red">Button</a>
+            <a class="waves-effect waves-light btn-large blue">
+                <i class="material-icons right">send</i>Submit
+            </a>
+            <a class="waves-effect waves-light btn-large green">
+                <i class="material-icons left">send</i>Submit
+            </a>
+
+            <h3 class="blue-text text-lighten-2">Small</h3>
+            <p>When mouse and keyboard are the primary input methods, this smaller button is useful for denser UI layouts.</p>
+            <a class="waves-effect waves-light btn-small red">Button</a>
+            <a class="waves-effect waves-light btn-small blue">
+                <i class="material-icons right">send</i>Submit
+            </a>
+            <a class="waves-effect waves-light btn-small green">
+                <i class="material-icons left">send</i>Submit
+            </a>
+
+            <h3 class="blue-text text-lighten-2">Disabled</h3>
+            <p>This style can be applied to all button types</p>
+            <a class="waves-effect waves-light btn-small red disabled">Button</a>
+            <a class="waves-effect waves-light btn-small blue disabled">
+                <i class="material-icons right">send</i>Submit
+            </a>
+            <a class="waves-effect waves-light btn-small green disabled">
+                <i class="material-icons left">send</i>Submit
+            </a>
+        </div>
+
+        <br><br>
+        <h1 class="blue-text text-lighten-2 center">Floating Action Button</h1>
+        <div class="divider"></div>
+        <br>
+
+        <div class="container">
+            <p>If you want a fixed floating action button, you can add multiple actions that will appear on hover. Our demo is in the bottom righthand corner of the page.</p>
+            
+            
+            <!-- My floating action button 1 -->
+            <!--
             <div class="fixed-action-btn">
                 <a class="btn-floating btn-large orange">
                     <i class="fa-solid fa-user"></i>
@@ -58,11 +109,41 @@
                     <li><a class="btn-floating purple"><i class="material-icons">discord</i></a></li>
                     <li><a class="btn-floating blue"><i class="material-icons">facebook</i></a></li>
                 </ul>
-            </div>
+            </div> 
+            -->
 
+            <!-- My floating action button 2 with toolbar-->
+            <div class="fixed-action-btn toolbar">
+                <a class="btn-floating btn-large orange">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="colors-typography.html" target="_blank" class="red">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="navbar-sidenav.html" target="_blank" class="orange">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="table-media.html" target="_blank" class="purple">
+                            <i class="material-icons">discord</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="table-media-gradient.html" target="_blank" class="blue">
+                            <i class="material-icons">facebook</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
         </div>
 
-        <!-- <div style="height: 1000px"></div> -->
+        <div style="height: 100px"></div>
 
         <!-- jquery link -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -73,7 +154,15 @@
         
         <script>
             $(document).ready(function() {
-                $('.fixed-action-btn').floatingActionButton();
+                // My floating action button 1
+                // $('.fixed-action-btn').floatingActionButton();
+
+                // My floating action button 2
+                $('.fixed-action-btn').floatingActionButton({
+                    // direction: 'left',
+                    hoverEnabled: false,
+                    toolbarEnabled: true
+                });
             });
         </script>
     </body>
